@@ -19,4 +19,5 @@ public class Manipulating_var_tom1 implements Runnable{
 		
 		System.out.println("Welcome to "+ Thread.currentThread().getName());
 	}
+	
 }

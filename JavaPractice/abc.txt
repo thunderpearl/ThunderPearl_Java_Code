@@ -1,0 +1,2 @@
+Hello, I am the test file for program FileInputStream
+If you are seeing me then it means that program is working perfectly fine.

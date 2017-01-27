@@ -13,10 +13,10 @@ class Fileinputstreamtom1{
 	   * the input stream and returns int in the range of 0 to 255. If no byte is available 
 	   * because the end of the stream has been reached, the returned value is -1.
 	   * */
-    FileInputStream fin=new FileInputStream("abc.txt");  
+    FileInputStream fin = new FileInputStream("C:\\eclipse practice\\Project4\\src\\JavaPractice\\abc.txt");  
     int i=0;  
     while((i=fin.read())!=-1){  
-     System.out.println((char)i);  
+     System.out.print((char)i + "\t");  
     }  
     fin.close();  
   }

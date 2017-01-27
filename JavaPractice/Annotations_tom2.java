@@ -7,7 +7,6 @@ class Annotations_tom2{
 	// Without below annotation it will through an error
 	
 @SuppressWarnings("unchecked")
-
 public static void main(String args[])
 	{  
 		ArrayList list=new ArrayList();  

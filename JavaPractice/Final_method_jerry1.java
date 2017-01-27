@@ -1,6 +1,7 @@
 package JavaPractice;
 
 public class Final_method_jerry1 extends Final_method_mobby1{
+	@Override
 	public void saying()
 	{
 		// we can't override saying method of super class as it is declared final, but we can overload 

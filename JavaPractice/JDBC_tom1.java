@@ -4,20 +4,26 @@ package JavaPractice;
 import java.sql.*;
 
 public class JDBC_tom1 {
+	// driver and connector is same thing
+	
  // JDBC driver name and database URL
+	// The driver class for mysql database is "com.mysql.jdbc.Driver"
  static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
- static final String DB_URL = "jdbc:mysql://localhost/EMP";
+ static final String DB_URL = "jdbc:mysql://localhost:4357/grade8";
 
  //  Database credentials
  static final String USER = "root";
- static final String PASS = "secret";
+ static final String PASS = "meliodas";
  
  public static void main(String[] args) {
  Connection conn = null;
  Statement stmt = null;
  try{
-    //STEP 2: Register JDBC driver
-    Class.forName("com.mysql.jdbc.Driver");
+	 
+	 // In latest jdk, we do not need to register the driver
+	 
+    //STEP 2: Register JDBC driver with driver manager
+       Class.forName(JDBC_DRIVER);
 
     //STEP 3: Open a connection
     System.out.println("Connecting to database...");
@@ -25,24 +31,28 @@ public class JDBC_tom1 {
 
     //STEP 4: Execute a query
     System.out.println("Creating statement...");
+    // createStatement() is the method of connection interface.
     stmt = conn.createStatement();
     String sql;
-    sql = "SELECT id, first, last, age FROM Employees";
+    sql = "SELECT ID, NAME, AGE, ADDRESS, SALARY FROM customers";
+    // executeQuery() is the method of Statement interface which return object of ResultSet
     ResultSet rs = stmt.executeQuery(sql);
 
     //STEP 5: Extract data from result set
     while(rs.next()){
        //Retrieve by column name
-       int id  = rs.getInt("id");
-       int age = rs.getInt("age");
-       String first = rs.getString("first");
-       String last = rs.getString("last");
+       int id  = rs.getInt("ID");
+       String name = rs.getString("NAME");
+       int age = rs.getInt("AGE");
+       String address = rs.getString("ADDRESS");
+       int salary = rs.getInt("SALARY");
 
        //Display values
        System.out.print("ID: " + id);
+       System.out.println("Name: "+ name);
        System.out.print(", Age: " + age);
-       System.out.print(", First: " + first);
-       System.out.println(", Last: " + last);
+       System.out.print(", First: " + address);
+       System.out.println(", Last: " + salary);
     }
     //STEP 6: Clean-up environment
     rs.close();

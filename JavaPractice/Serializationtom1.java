@@ -10,11 +10,11 @@ package JavaPractice;
 import java.io.*;  
 class Serializationtom1{  
  public static void main(String args[])throws Exception{  
-  Serializationjerry1 s1 =new Serializationjerry1(211,"ravi");  
+  Serializationjerry1 s1 = new Serializationjerry1(211,"ravi");  
   
   // This file will be created in eclipsepractice folder.
   // This below code is or writing the 
-  FileOutputStream fout=new FileOutputStream("iamthefile.txt"); 
+  FileOutputStream fout = new FileOutputStream("iamthefile.txt"); 
   
   // The ObjectOutputStream class is used 
   // to write primitive data types and Java objects to an OutputStream. 
@@ -23,6 +23,8 @@ class Serializationtom1{
   
   out.writeObject(s1);  
   out.flush();  
+  out.close();
   System.out.println("success");  
+  
  }  
 }  

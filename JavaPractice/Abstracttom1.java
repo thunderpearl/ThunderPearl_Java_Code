@@ -18,7 +18,7 @@ public class Abstracttom1 {
 	// we can not create object of abstract method.	
 	//	Abstractmobby1 obj3 = new Abstractmobby1();
 		
-		// But we can do typr casting with abstract class.
+		// But we can do up casting with abstract class.
 		Abstractmobby1 obj4= new Abstractjerry1();
 		obj4.display();
 		

@@ -3,7 +3,7 @@ package JavaPractice;
 public class Getters_tom1 {
 	public static void main(String[] args)
 	{
-		
+		String var1 = "yoyo";
 		
 		Getters_tom1 obj1 = new Getters_tom1();
 		

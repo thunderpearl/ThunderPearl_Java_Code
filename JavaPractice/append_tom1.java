@@ -1,4 +1,10 @@
+/*String buffer class in java is same as String class
+ * except that it is mutable class*
+ * 
+ * This class is thread safe, it means multiple threads cannot access it
+ *  hence, it will follow an order. */
 package JavaPractice;
+
 
 import java.util.*;
 public class append_tom1 {

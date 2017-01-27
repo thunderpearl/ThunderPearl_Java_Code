@@ -1,3 +1,8 @@
+/* Wrapper class provides the mechanism to convert primitive to object and 
+ * object to primitive */
+
+/* autoboxing is the mechanism for converting primitive to object and object to primitive is called
+ * as unboxing */
 package JavaPractice;
 
 public class Wrapper_Class {

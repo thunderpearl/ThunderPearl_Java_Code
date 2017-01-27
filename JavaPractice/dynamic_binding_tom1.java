@@ -8,6 +8,6 @@ public class dynamic_binding_tom1 {
 		
 		obj1.start();
 	}
-	// Now, this is an example of dynamic binding as which method is to be run us decided by type 
+	// Now, this is an example of dynamic binding as which method is to be run, decided by type 
 	// of object called and that is decoded at run time.
 }

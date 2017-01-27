@@ -19,6 +19,11 @@ public class Compare_To {
 		
 		// if we get negative value then it means str1 is less than str2.
 		// if we get positive value then it means str1 is greater than str2.
+		Integer num1 = 23;
+		Integer num2 = 43;
+		
+		// compareTo() method can only be used with primitive datatypes.
+		System.out.println(num1.compareTo(num2));
 	}
 
 }

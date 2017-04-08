@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="H:/Hadoop/Hadoop 2.0 Developer Course Content/Supporting Jars/hadoop-core.jar" sourcepath="H:/Hadoop/Hadoop 2.0 Developer Course Content/Supporting Jars"/>
+	<classpathentry kind="lib" path="H:/Hadoop/Hadoop 2.0 Developer Course Content/Supporting Jars/poi-3.9.jar"/>
+	<classpathentry kind="lib" path="H:/Hadoop/Hadoop 2.0 Developer Course Content/Supporting Jars/commons-logging-1.2.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

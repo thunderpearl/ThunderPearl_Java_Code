@@ -1,10 +1,8 @@
-package custominputformat1;
+package custominputformat3;
 
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
-// Just like we have LongWritable and Text as input key and value in normal Mapper, here we have
- // our own custom key and value which are MyKey and MyValue....
 public class MyMapper extends Mapper<MyKey, MyValue, Text, Text> {
         
 	// Main thing to focus is how our custom RecordReader aka MyRecordReader will read 
@@ -16,6 +14,10 @@ public class MyMapper extends Mapper<MyKey, MyValue, Text, Text> {
         	   // is working on it	  
            if(value.getAmt()>150)
            {
+        	   // In the output of this program we will only get value part because we have 
+        	    // taken values only in our custominputformat.
+        	   // getUpperCat() method will give category of exercise. See txnslarge.dat file 
+        	    // and also see method getUpperCat() .
         	   context.write(new Text(key.getTid()), new Text(value.getUpperCat()));
            }
             		

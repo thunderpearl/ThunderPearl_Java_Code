@@ -13,11 +13,8 @@ public class mydriver {
 		Configuration conf = new Configuration();
 		
 		// We are adding our input argument like this.
-		conf.set("Arg1", args[0]); 
-		conf.set("Arg2", args[1]);// We are giving arg[0] place for string to 
-		// be searched in command. And this parameter passed will be available to 
-		// mapper using context.getConfiguration.get("Uid2Seach") 
-        // will be available to reducer also using context.
+		conf.set("Arg1", args[0]); // 
+		conf.set("Arg2", args[1]);
 		
 		Job job = new Job(conf, "Map Reduce Search Txn by Arg");
 		job.setJarByClass(mydriver.class);

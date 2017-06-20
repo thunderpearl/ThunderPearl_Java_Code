@@ -22,6 +22,7 @@ public class MyPartitioner extends Partitioner<Text, IntWritable> {
 
 			String myKey = key.toString().toLowerCase();
 
+			// These conditions will run when startsWith() method will return true....
 			if (myKey.startsWith("a") ) { // This is the partition of strings
 				return 0; // strings which starts with "a" will go to reducer 0
 			}

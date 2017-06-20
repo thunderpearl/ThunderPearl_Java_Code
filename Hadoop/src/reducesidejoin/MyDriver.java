@@ -18,7 +18,8 @@ public class MyDriver {
 		Job job = new Job(conf, "Reduce Side Join");
 		
 		job.setJarByClass(MyDriver.class);
-		job.setReducerClass(MyJoinReducer.class);
+		job.setReducerClass(MyJoinReducer.class); // This is same as any other reducer
+		                                           // just name is different....
 		
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(Text.class);

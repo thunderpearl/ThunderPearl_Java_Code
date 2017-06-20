@@ -20,10 +20,11 @@ import org.apache.hadoop.mapreduce.Reducer;
 public class MyJoinReducer extends Reducer<Text, Text, Text, NullWritable> {
 	
 	public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-		
+		// Reducer will get all the key-value pairs under same umbrella where key is same
+		 // Key(Uid) will either have Name or Amt as value.... 
 		String CustName = "";
 		double CustTotal = 0.0;
-		int TxnCount = 0;		
+		int TxnCount = 0; // This variable is for number of Transactions....		
 		for (Text SingleVal : values) {
 			String ValueParts[] = SingleVal.toString().split(":");
 			if (ValueParts[0].equals("Amt")) {

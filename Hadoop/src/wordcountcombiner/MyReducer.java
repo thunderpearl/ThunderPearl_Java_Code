@@ -18,10 +18,14 @@ public class MyReducer extends Reducer<Text,IntWritable,Text,IntWritable> {
 			// total number of counts, we are just printing 
 			//what is coming into the reducer.
 			
-			// This may seems that for loop will have to handle more than one entity
-			 // but actually it has to do or say act on one entry only......
-			  // and reducer will run that for loop on every line just for one entry each.
-			
+/** One combiner will work on output of one mapper and act like a mini reducer. Here, file is 
+ * not that much big hence we are not doing anything in reducer but, in case of big files where 
+ * there will be more than one mappers we will have same number of combiners. And, both combiners
+ * after doing their mini reduction part will still have same key in both the combiners and can
+ * have different values for those keys. Then, in reducer phase we will have to aggregate both
+ * the keys and write the aggregation code inside reducer as well.... 
+			  
+	*/		
 		}
 	}
 }

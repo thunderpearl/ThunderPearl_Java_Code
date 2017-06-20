@@ -15,7 +15,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 public class MyMapper extends Mapper<LongWritable,Text, Text, NullWritable> {
     
-	//  HashMap is the part of collections in java and is used to store as temparary 
+	//  HashMap is the part of collections in java and is used to store as temporary 
 	// cache for either request scope or session scope.
 	
 	// HashMap maintains the key,value pairs, HashMap implements Map Interface.

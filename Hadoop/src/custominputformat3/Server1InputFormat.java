@@ -1,6 +1,4 @@
-
-
-package custominputformat1;
+package custominputformat3;
 
 import java.io.IOException;
 
@@ -9,7 +7,7 @@ import org.apache.hadoop.mapreduce.RecordReader;
 import org.apache.hadoop.mapreduce.TaskAttemptContext;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 
-public class Server1Inputformat extends FileInputFormat<MyKey, MyValue> {
+public class Server1InputFormat extends FileInputFormat<MyKey, MyValue> {
 
 	@Override
 	// InputFormat file must do 3 tasks.
@@ -22,8 +20,6 @@ public class Server1Inputformat extends FileInputFormat<MyKey, MyValue> {
 	public RecordReader<MyKey, MyValue> createRecordReader(InputSplit arg0,
 			TaskAttemptContext arg1) throws IOException, InterruptedException {
 
-		// InputFormat provides the implementation of RecordReader....
-		// MyRecordReader is extending RecordReader hence return type will be RecordReader....
 		return new MyRecordReader();
 
 

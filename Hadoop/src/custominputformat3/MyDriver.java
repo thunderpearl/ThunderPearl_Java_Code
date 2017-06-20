@@ -1,17 +1,7 @@
-// txn file is input file here....
-//Here core common loggings jar is also used along with core jar.
+package custominputformat3;
 
-/* Understanding flow of this job is like :- 
- * 
- * "MyDriver.java"
- * MyKey.java
- * MyValue.java
- * MyRecordReader.java
- * Server1Inputformat.java
- * MyMapper.java
- * */
-
-package custominputformat1;
+// Input file is txnslarge.dat
+// We have created this application to get category of the sport only....
 import java.io.IOException;
 
 import org.apache.hadoop.fs.Path;
@@ -36,7 +26,7 @@ public class MyDriver {
     
     // Every job in MapReduce must define its inputs according
     // to contracts specified in the InputFormat abstract class.
-    job.setInputFormatClass(Server1Inputformat.class);
+    job.setInputFormatClass(Server1InputFormat.class);
     job.setMapOutputKeyClass(Text.class);
     job.setMapOutputValueClass(Text.class); 
     

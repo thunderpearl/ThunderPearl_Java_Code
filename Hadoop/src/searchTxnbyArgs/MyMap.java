@@ -29,6 +29,8 @@ public class MyMap extends Mapper<LongWritable, Text, NullWritable,Text>{
 			// And this parameter arg[0] passed will be available to mapper 
 			// using context.getConfiguration.get("Uid2Seach") 
 			
+			// We don't need for loop here because we are just taking 3rd element in everyline
+			 // no need to traverse every word inside a line....
 			if(Uid.equals(Uid2Search))
 			{
 				context.write(null, value);	

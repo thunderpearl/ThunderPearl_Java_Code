@@ -1,0 +1,80 @@
+hostname: db4free.net
+database: hadoop2323
+username: hadoop2323
+password: hadoop2323
+
+Most of the commands can are available on website TutorialsPoint.
+
+We will be in /home/cloudera, but as we have mysql connector on desktop, we need to move to desktop first and then hit the below command to copy the connector in lib.
+
+sudo cp mysql-connector-java-5.1.34/mysql-connector-java-5.1.34-bin.jar /usr/lib/sqoop/lib
+
+
+sqoop import --connect jdbc:mysql://db4free.net/hadoop2323  --username hadoop2323 --password hadoop2323 --table students   
+
+
+
+sqoop import --connect jdbc:mysql://hadoop.db.11843134.hostedresource.com/hadoop  --username hadoop --password h@dOOP123 --query 'select max(AMT), UID from Hadoop_Data where $CONDITIONS group by UID' --target-dir /query_data --num-mappers 1
+
+
+
+
+sqoop import --connect jdbc:mysql://hadoop.db.11843134.hostedresource.com/hadoop  --username nextra --password N3x7r@W38 --table nxn_posts   
+
+
+
+sqoop import --connect jdbc:mysql://nextra.db.11843134.hostedresource.com/nextra  --username nextra --P --table nxn_posts 
+
+
+
+
+sqoop import --connect jdbc:mysql://nextra.db.11843134.hostedresource.com/nextra  --username nextra --password xxxxxx --table nxn_posts --verbose --append
+
+sudo cp mysql-connector-java-5.1.36/mysql-connector-java-5.1.36-bin.jar /usr/lib/sqoop/lib
+
+
+sqoop import --connect jdbc:mysql://nextra.db.11843134.hostedresource.com/nextra  --username nextra --password xxxxxx --table nxn_posts --verbose  --target-dir /myresult1234
+
+
+
+sqoop import --connect jdbc:mysql://nextra.db.11843134.hostedresource.com/nextra  --username nextra --password xxxxxx --table nxn_posts --verbose  --target-dir /myresult1234 --columns "post_title" --where "id < 10" --num-mappers 1
+
+
+
+
+sqoop import --connect jdbc:mysql://nextra.db.11843134.hostedresource.com/nextra  --username nextra --password xxxxxx --table nxn_posts --verbose  --target-dir /myresult1234 --columns "post_title,post_status" --where "id < 10" --num-mappers 1 --fields-terminated-by , --enclosed-by '\"' 
+
+
+
+
+sqoop import --connect jdbc:mysql://nextra.db.11843134.hostedresource.com/nextra  --username nextra --password xxxxxx --table nxn_posts --verbose --columns "post_title,post_status" --where "id < 10" --num-mappers 1 --fields-terminated-by , --hive-import --hive-table abdata.myresult 
+
+
+
+sqoop export --connect jdbc:mysql://nextra.db.11843134.hostedresource.com/nextra --username nextra --password N3x7r@W38 --table ducat --export-dir /user/cloudera/scoop123  --update-key id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

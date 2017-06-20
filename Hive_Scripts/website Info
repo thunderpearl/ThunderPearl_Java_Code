@@ -1,0 +1,6 @@
+create table websire_table(Eid int, URLL String, Datee String, Timee String) partitioned by(IPP String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE;
+

@@ -20,6 +20,8 @@ public class MyDriver {
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
 		
+		// this args[] array is a way to pass the values at run time....
+		// It is very clear that set() must be the method of Configuration class....
 		conf.set("searchstring", args[0]);
 		
 		Job job = new Job(conf, "Map Reduce for User Total");		

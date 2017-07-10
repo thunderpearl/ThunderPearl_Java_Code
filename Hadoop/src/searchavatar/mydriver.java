@@ -12,12 +12,16 @@ public class mydriver {
 	// This is the driver for the SearchTxn
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
+		
 		Job job = new Job(conf, "Map Reduce Search Txn");
+		
 		job.setJarByClass(mydriver.class);
 		job.setMapperClass(mymapper.class);
+		
 		job.setMapOutputKeyClass(NullWritable.class);
 		job.setMapOutputValueClass(Text.class);
 		job.setNumReduceTasks(0);
+		
 		FileInputFormat.addInputPath(job, new Path(args[0]));
 		FileOutputFormat.setOutputPath(job, new Path(args[1]));
 		System.exit(job.waitForCompletion(true) ? 0 : 1);

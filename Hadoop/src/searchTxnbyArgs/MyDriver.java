@@ -24,11 +24,14 @@ public class MyDriver {
         // will be available to reducer also using context.
 		
 		Job job = new Job(conf, "Map Reduce Search Txn by Arg");
+		
 		job.setJarByClass(MyDriver.class);
 		job.setMapperClass(MyMap.class);
+		
 		job.setMapOutputKeyClass(NullWritable.class);
 		job.setMapOutputValueClass(Text.class);
 		job.setNumReduceTasks(0);
+		
 		FileInputFormat.addInputPath(job, new Path(args[1]));
 		FileOutputFormat.setOutputPath(job, new Path(args[2]));
 		System.exit(job.waitForCompletion(true) ? 0 : 1);

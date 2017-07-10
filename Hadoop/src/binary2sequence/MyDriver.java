@@ -27,7 +27,11 @@ public class MyDriver {
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(BytesWritable.class);
 		
+		// We will be giving a text file which will hold the location of our small files
 		job.setInputFormatClass(TextInputFormat.class);
+		
+		// We will be converting that input file into SequenceFile on which we will be doing the 
+		 // processing 
 		job.setOutputFormatClass(SequenceFileOutputFormat.class);
 		
 		// Default reducer will work in this program because, we have not made reducer 0.

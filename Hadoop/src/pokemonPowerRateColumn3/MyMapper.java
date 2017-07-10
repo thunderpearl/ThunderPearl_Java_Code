@@ -1,5 +1,5 @@
 package pokemonPowerRateColumn3;
-
+// we are refering pokemon.sql files to construct Map Reduce Programs.
 import java.io.IOException;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
@@ -10,7 +10,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 // Input file is Pokemon.csv
 // jar file used here is pokemonPowerRateColumn3_1.jar and it's output is in pokemonPowerRateColumn_
  // output3_1
-// This job will include header of csv file as well
+// This job will include header of .csv file as well
 public class MyMapper extends Mapper<LongWritable, Text, NullWritable, Text>{
 	public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException
 	{

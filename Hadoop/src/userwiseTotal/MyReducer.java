@@ -5,7 +5,6 @@ package userwiseTotal;
 //This is REDUCER program for UserwiseTotal
 //"usertotal.txt" is the input file for this
 import java.io.IOException;
-
 import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;

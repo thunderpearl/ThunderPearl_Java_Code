@@ -3,7 +3,6 @@ package uniqueimages;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
 import org.apache.hadoop.io.BytesWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -13,12 +12,14 @@ import org.apache.hadoop.mapreduce.Mapper;
 // We are processing a sequence file to find the duplicate images.
 public class MyMapper extends Mapper<Text, BytesWritable, Text, Text> {
 
+// In a sequence file filename,creation time and path are considered as keys, and data as values.
 	public void map(Text key, BytesWritable value, Context context) throws IOException, InterruptedException {
 
 		String md5Str;
 		try {
 			
 			// md5 of same strings or say data will be always same.....
+			// getBytes() method will return the byte array of the string on which it is applied.
 			md5Str = calculateMd5(value.getBytes());
 			
 		} catch (NoSuchAlgorithmException e) {
@@ -38,6 +39,8 @@ public class MyMapper extends Mapper<Text, BytesWritable, Text, Text> {
 	// This is the calculateMd5() method. It is static type so can be called directly
 	static String calculateMd5(byte[] imageData) throws NoSuchAlgorithmException {
 
+		// This MessageDigest() must create the message digest for every picture which is sub file of 
+		 // a sequence file ....
 		MessageDigest md = MessageDigest.getInstance("MD5");
 		md.update(imageData);
 		byte[] hash = md.digest();

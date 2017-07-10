@@ -19,6 +19,8 @@ public class Server1Inputformat extends FileInputFormat<MyKey, MyValue> {
 
 	// Number of Input Splits decides the number of mapper to be run, hence
 	// it is crucial in parallelism.
+	
+	// This below method will create the custom record reader....
 	public RecordReader<MyKey, MyValue> createRecordReader(InputSplit arg0,
 			TaskAttemptContext arg1) throws IOException, InterruptedException {
 

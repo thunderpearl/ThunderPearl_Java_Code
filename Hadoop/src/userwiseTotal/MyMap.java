@@ -6,7 +6,6 @@ package userwiseTotal;
 
 //"usertotal.txt" is the input file for this
 import java.io.IOException;
-
 import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -31,10 +30,11 @@ public class MyMap extends Mapper<LongWritable, Text, Text, DoubleWritable>{
 			// lineparts[3], it refers to the Amount.
 			DoubleWritable mapout = new DoubleWritable(Double.parseDouble(lineParts[3]));
 			
-			// Here we are just giving the key and putting sum as it's value
+			// Here we are just giving the key and putting amount as it's value for the records 
+			 // which are satisfying the "if" condition...
 			if(mapkey.toString().equals(SearchString))
 			{
-			context.write(mapkey,mapout );
+				context.write(mapkey,mapout );
 			}
 		}
 	}

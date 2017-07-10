@@ -1,4 +1,4 @@
-package custominputformat3;
+package custominputformat4;
 
 import java.io.IOException;
 

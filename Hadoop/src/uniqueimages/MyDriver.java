@@ -1,7 +1,9 @@
 package uniqueimages;
 
 // This is the program for finding same images, may be they have different names.
- // But, these are same images.
+ // But, are actually the same images.
+// We will use the concept of sequence files to achieve this as sequence files can combine small 
+ // small files to make one file and then we can do our processing.... 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
@@ -29,6 +31,8 @@ public class MyDriver {
 		job.setMapOutputKeyClass(Text.class);
 		job.setMapOutputValueClass(Text.class);
 		
+		// This is for setting the InputFormat which we are taking as SequenceFile in our case here
+		// Default InputFormat is actually TextInputFormat....
 		job.setInputFormatClass(SequenceFileInputFormat.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
 		

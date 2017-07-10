@@ -1,7 +1,7 @@
-package custominputformat3;
+package custominputformat4;
 
 //Check out this
-// https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapreduce/RecordReader.html
+//https://hadoop.apache.org/docs/r2.4.1/api/org/apache/hadoop/mapreduce/RecordReader.html
 import java.io.IOException;
 
 import org.apache.hadoop.io.Text;
@@ -11,10 +11,10 @@ import org.apache.hadoop.mapreduce.TaskAttemptContext;
 import org.apache.hadoop.mapreduce.lib.input.LineRecordReader;
 
 //As we are extending to RecordReader class and overriding it's methods, so read the 
-// documentation of RecordReader class also....
+//documentation of RecordReader class also....
 public class MyRecordReader extends RecordReader<MyKey,MyValue> {
 
-// MyKey and MyValue in this program, MyKey and MyValue are just data types which are
+//MyKey and MyValue in this program, MyKey and MyValue are just data types which are
 	// name for convenience only. 
 	private MyKey key;
 	private MyValue value;
